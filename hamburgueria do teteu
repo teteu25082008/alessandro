@@ -30,9 +30,8 @@ public class main {
         System.out.printf("Sobra para a caixinha: R$ %.2f%n", valorSobra);
 
         scanner.close();
-    }
-}import java.util.Scanner;
-
+}
+} 
 
 
         scanner.close();
