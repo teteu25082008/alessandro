@@ -1,0 +1,64 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        Double distancia;
+        Double consumo;
+        int combustivel;
+        Double litros;
+        Double emissao;
+
+        System.out.println("========================================");
+        System.out.println("          ECOLOG LOGÍSTICA");
+        System.out.println("       SIMULADOR DE EMISSÃO DE CO2");
+        System.out.println("========================================");
+        System.out.println();
+
+        System.out.println("----------- DADOS DA VIAGEM ------------");
+        System.out.println();
+
+        System.out.print("Distancia da viagem (km)       : ");
+        distancia = scanner.nextDouble();
+
+        System.out.print("Consumo do caminhão (km/l)     : ");
+        consumo = scanner.nextDouble();
+
+        System.out.println();
+        System.out.println("1 - Diesel");
+        System.out.println("2 - Biodiesel");
+        System.out.print("Tipo de combustivel            : ");
+        combustivel = scanner.nextInt();
+
+        litros = distancia / consumo;
+
+        if (combustivel == 1) {
+            emissao = litros * 2.6;
+        } else {
+            emissao = litros * 0.8;
+        }
+
+        System.out.println();
+        System.out.println("========================================");
+        System.out.println("              RESULTADO");
+        System.out.println("========================================");
+
+        System.out.println("| Distancia       | " + distancia + " km");
+        System.out.println("| Consumo         | " + consumo + " km/l");
+
+        if (combustivel == 1) {
+            System.out.println("| Combustivel     | Diesel");
+        } else {
+            System.out.println("| Combustivel     | Biodiesel");
+        }
+
+        System.out.println("| Litros gastos   | " + litros + " L");
+        System.out.println("| Emissao de CO2  | " + emissao + " kg");
+
+        System.out.println("========================================");
+        System.out.println("          FIM DA SIMULAÇÃO");
+        System.out.println("========================================");
+    }
+}
