@@ -1,0 +1,100 @@
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        Double valorConta;
+        Double taxaGarcom;
+        int pessoas;
+        System.out.println("=====================");
+        System.out.println("hamburgueria do teteu");
+        System.out.println("=====================");
+        System.out.print("Digite o valor da conta: ");
+        valorConta = scanner.nextDouble();
+        System.out.print("Digite a taxa de serviço: % ");
+        taxaGarcom = scanner.nextDouble();
+        System.out.print("Digite a quantidade de pessoas: ");
+        pessoas = scanner.nextInt();
+        double valorTaxa = valorConta * taxaGarcom / 100;
+        double valorTotal = valorConta + valorTaxa;
+        int totalCentavos = (int) Math.round(valorTotal * 100);
+        int centavosPorPessoa = totalCentavos / pessoas;
+        int sobra = totalCentavos % pessoas;
+        Double valorPessoa = centavosPorPessoa / 100.0;
+        Double valorSobra = sobra / 100.0;
+
+        System.out.printf("Valor total: R$ %.2f%n", valorTotal);
+        System.out.printf("\nValor da taxa: R$ %.2f%n", valorTaxa);
+        System.out.printf("Cada pessoa paga: R$ %.2f%n", valorPessoa);
+        System.out.printf("Sobra para a caixinha: R$ %.2f%n", valorSobra);
+
+        scanner.close();
+    }
+}import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        Double valorConta;
+        Double taxaGarcom;
+        int pessoas;
+        System.out.println("=====================");
+        System.out.println("hamburgueria do teteu");
+        System.out.println("=====================");
+        System.out.print("Digite o valor da conta: ");
+        valorConta = scanner.nextDouble();
+        System.out.print("Digite a taxa de serviço: % ");
+        taxaGarcom = scanner.nextDouble();
+        System.out.print("Digite a quantidade de pessoas: ");
+        pessoas = scanner.nextInt();
+        double valorTaxa = valorConta * taxaGarcom / 100;
+        double valorTotal = valorConta + valorTaxa;
+        int totalCentavos = (int) Math.round(valorTotal * 100);
+        int centavosPorPessoa = totalCentavos / pessoas;
+        int sobra = totalCentavos % pessoas;
+        Double valorPessoa = centavosPorPessoa / 100.0;
+        Double valorSobra = sobra / 100.0;
+
+        System.out.printf("Valor total: R$ %.2f%n", valorTotal);
+        System.out.printf("\nValor da taxa: R$ %.2f%n", valorTaxa);
+        System.out.printf("Cada pessoa paga: R$ %.2f%n", valorPessoa);
+        System.out.printf("Sobra para a caixinha: R$ %.2f%n", valorSobra);
+
+        scanner.close();
+    }
+}import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        Double valorConta;
+        Double taxaGarcom;
+        int pessoas;
+        System.out.println("=====================");
+        System.out.println("hamburgueria do teteu");
+        System.out.println("=====================");
+        System.out.print("Digite o valor da conta: ");
+        valorConta = scanner.nextDouble();
+        System.out.print("Digite a taxa de serviço: % ");
+        taxaGarcom = scanner.nextDouble();
+        System.out.print("Digite a quantidade de pessoas: ");
+        pessoas = scanner.nextInt();
+        double valorTaxa = valorConta * taxaGarcom / 100;
+        double valorTotal = valorConta + valorTaxa;
+        int totalCentavos = (int) Math.round(valorTotal * 100);
+        int centavosPorPessoa = totalCentavos / pessoas;
+        int sobra = totalCentavos % pessoas;
+        Double valorPessoa = centavosPorPessoa / 100.0;
+        Double valorSobra = sobra / 100.0;
+
+        System.out.printf("Valor total: R$ %.2f%n", valorTotal);
+        System.out.printf("\nValor da taxa: R$ %.2f%n", valorTaxa);
+        System.out.printf("Cada pessoa paga: R$ %.2f%n", valorPessoa);
+        System.out.printf("Sobra para a caixinha: R$ %.2f%n", valorSobra);
+
+        scanner.close();
+    }
+}
