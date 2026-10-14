@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class uber {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        double distancia, total, valorPessoa;
+        int alunos;
+        System.out.println("==============================");
+        System.out.println("        UBER ESCOLAR");
+        System.out.println("==============================");
+        System.out.print("Digite a distancia da viagem km: ");
+        distancia = entrada.nextDouble();
+        System.out.print("Digite o numero de alunos: ");
+        alunos = entrada.nextInt();
+        total = (distancia * 2.50) + 4.00;
+        valorPessoa = total / alunos;
+        System.out.println("==============================");
+        System.out.println("        RESULTADO ");
+        System.out.println("==============================");
+        System.out.printf("Distancia: %.2f km%n", distancia);
+        System.out.printf("Total da corrida: R$ %.2f%n", total);
+        System.out.printf("Valor por aluno: R$ %.2f%n", valorPessoa);
+        System.out.println("=========================");
+        entrada.close();
+    }
+}
