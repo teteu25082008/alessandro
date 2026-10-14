@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class simulador {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        double distancia, consumo;
+        double litros, emissaoDiesel, emissaoBiodiesel;
+        System.out.println("================================");
+        System.out.println("           SIMULADOR    ");
+        System.out.println("================================");
+        System.out.print("Digite a distancia percorrida km: ");
+        distancia = entrada.nextDouble();
+        System.out.print("Digite o consumo do caminhao km/l: ");
+        consumo = entrada.nextDouble();
+        litros = distancia / consumo;
+        emissaoDiesel = litros * 2.6;
+        emissaoBiodiesel = litros * 0.8;
+        System.out.println("===============================");
+        System.out.println("           RESULTADO     ");
+        System.out.println("===============================");
+        System.out.printf("Distancia percorrida: %.2f km%n", distancia);
+        System.out.printf("Combustivel consumido: %.2f litros%n", litros);
+        System.out.printf("Emissao com Diesel: %.2f kg de CO2%n",
+                emissaoDiesel);
+        System.out.printf("Emissao com Biodiesel: %.2f kg de CO2%n",
+                emissaoBiodiesel);
+        System.out.printf("Reducao de CO2: %.2f kg%n",
+                emissaoDiesel - emissaoBiodiesel);
+        System.out.println("===============================");
+        entrada.close();
+    }
+}
