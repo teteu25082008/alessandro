@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Cafeteria {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        
+        System.out.println("======Quantidade======");
+        
+        System.out.print("Quantidade de cafés: ");
+        int cafes = entrada.nextInt();
+
+        System.out.print("Quantidade de salgados: ");
+        int salgados = entrada.nextInt();
+        
+        System.out.println("=======================");
+
+        double totalCafe = cafes * 6.00;
+        double totalSalgado = salgados * 8.00;
+
+        double taxa = 3.50;
+        double desconto = 0;
+
+        if (cafes + salgados > 3) {
+            desconto = 5.00;
+        }
+
+        double total = totalCafe + totalSalgado + taxa - desconto;
+
+        System.out.printf("Valor final: R$ %.2f%n", total);
+
+        entrada.close();
+    }
+}
