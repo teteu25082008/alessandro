@@ -1,3 +1,30 @@
-
-
-fd
+import java.util.Scanner;
+public class hamburgueria {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+        int pessoas;
+        double conta, taxa, total, valorPessoa, sobra;
+        System.out.println("================================");
+        System.out.println("   DIVISAO JUSTA DA CONTA");
+        System.out.println("================================");
+        System.out.print("Digite o valor da conta: R$ ");
+        conta = entrada.nextDouble();
+        System.out.print("Digite a taxa de servico (%): ");
+        taxa = entrada.nextDouble();
+        System.out.print("Digite a quantidade de pessoas: ");
+        pessoas = entrada.nextInt();
+        total = conta + (conta * taxa / 100);
+        valorPessoa = total / pessoas;
+        sobra = total - (valorPessoa * pessoas);
+        System.out.println("================================");
+        System.out.println("             RESULTADO           ");
+        System.out.println("================================");
+        System.out.printf("Valor da conta: R$ %.2f%n", conta);
+        System.out.printf("Taxa de servico: %.2f%%%n", taxa);
+        System.out.printf("Valor total: R$ %.2f%n", total);
+        System.out.printf("Cada pessoa paga: R$ %.2f%n", valorPessoa);
+        System.out.printf("Sobra: R$ %.2f%n", sobra);
+        System.out.println("===============================");
+        entrada.close();
+    }
+}
